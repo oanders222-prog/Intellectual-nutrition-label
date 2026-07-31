@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Intellectual Nutrition Label</title>
+  <meta name="description" content="Contact Intellectual Nutrition Label." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Intellectual Nutrition Label</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a href="labels.html">The Labels</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <h1>Contact</h1>
+        <p>Use this page for questions, submissions, media inquiries, or a link to your Substack.</p>
+        <a class="button main-screen-button" href="index.html">Main Screen</a>
+      </div>
+    </section>
+
+    <section class="section narrow">
+      <h2>Get in touch</h2>
+      <p>Replace the text below with your preferred contact instructions. You can include an email address, Substack link, or a form service later.</p>
+
+      <div class="editor-card">
+        <label class="editor-label" for="contactText">Draft your Contact page text here</label>
+        <textarea class="textbox" id="contactText">To suggest a professor for review, send the professor’s name, university, department, and public source links such as a university page, CV, publications, syllabi, interviews, podcasts, or lectures.</textarea>
+        <a class="button" href="mailto:contact@intellectualnutritionlabel.com">Email contact@intellectualnutritionlabel.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Intellectual Nutrition Label.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

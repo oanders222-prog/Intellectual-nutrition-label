@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Labels | Intellectual Nutrition Label</title>
+  <meta name="description" content="Browse Intellectual Nutrition Labels." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Intellectual Nutrition Label</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a class="active" href="labels.html">The Labels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <h1>The Labels</h1>
+        <p>Browse the labels as you add them. This page is structured like a simple blog index: newest labels can go first.</p>
+        <a class="button main-screen-button" href="index.html">Main Screen</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Recent labels</h2>
+      <p class="lead">To add a new label, copy one of the cards below, change the title, summary, date, and link, then create a matching page or image for that professor.</p>
+
+      <div class="label-grid">
+        <article class="label-card">
+          <span class="badge">Sample Label</span>
+          <h3>Professor’s Name</h3>
+          <p><strong>Posted:</strong> Fall 2026</p>
+          <p>A placeholder entry for your first Intellectual Nutrition Label. Replace this text with a short summary of the professor, course area, and public sources used.</p>
+          <a class="card-link" href="sample-label.html">Open label →</a>
+        </article>
+
+        <article class="label-card">
+          <span class="badge">Coming Soon</span>
+          <h3>Next Label</h3>
+          <p><strong>Posted:</strong> Coming soon</p>
+          <p>Use this card for the next label you publish. Put the most recent labels at the top so the page functions like a blog.</p>
+          <a class="card-link" href="#">Coming soon →</a>
+        </article>
+
+        <article class="label-card">
+          <span class="badge">How It Works</span>
+          <h3>Methodology</h3>
+          <p><strong>Category:</strong> Explainer</p>
+          <p>Explain how you gather public information, evaluate intellectual ingredients, and assign rankings.</p>
+          <a class="card-link" href="about.html">Read methodology →</a>
+        </article>
+      </div>
+
+      <div class="blog-note">
+        <h3>Easy way to add new labels</h3>
+        <p>For each new label, create a new HTML page such as <strong>professor-smith.html</strong>, place the label image in the <strong>assets</strong> folder, and add a new card above linking to that page.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Intellectual Nutrition Label.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

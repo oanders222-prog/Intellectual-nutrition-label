@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Intellectual Nutrition Label</title>
+  <meta name="description" content="About the Intellectual Nutrition Label project." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Intellectual Nutrition Label</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="about.html">About</a>
+      <a href="labels.html">The Labels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <h1>About the project</h1>
+        <p>A transparency tool for families who want to know what ideas are being served in the classroom.</p>
+        <a class="button main-screen-button" href="index.html">Main Screen</a>
+      </div>
+    </section>
+
+    <section class="section narrow">
+      <h2>About</h2>
+      <p>The Intellectual Nutrition Label is a way to summarize the intellectual ingredients in a professor’s public work. It is designed to help parents and students understand the worldview, values, influences, and likely classroom emphases before enrolling in a course.</p>
+      <p>Use the editable text box below as a drafting space. Replace this with your finished About-page copy when you are ready.</p>
+
+      <div class="editor-card">
+        <label class="editor-label" for="aboutText">Draft your About page text here</label>
+        <textarea class="textbox" id="aboutText">The Intellectual Nutrition Label is a transparency tool for parents and students. It evaluates publicly available information such as university pages, CVs, published articles, books, podcasts, syllabi, and lectures. The goal is not to smear professors, but to make the intellectual contents of a class easier to understand before families pay tuition.</textarea>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Intellectual Nutrition Label.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
