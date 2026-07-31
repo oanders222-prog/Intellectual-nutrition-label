@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intellectual Nutrition Label</title>
+  <meta name="description" content="A transparency project helping parents and students understand the intellectual ingredients inside college courses." />
+  <style>
+    :root {
+      --ink: #111111;
+      --paper: #ffffff;
+      --cream: #f7f3eb;
+      --gold: #c7a24a;
+      --red: #8f1d1d;
+      --glass: rgba(0, 0, 0, 0.56);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--paper);
+      background: #111;
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      background-image:
+        linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.42) 45%, rgba(0,0,0,.48)),
+        url("assets/campus-background.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      width: 100%;
+      padding: 24px clamp(20px, 5vw, 72px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      background: rgba(0,0,0,.42);
+      border-bottom: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(1.8rem, 4vw, 3.3rem);
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 3px 12px rgba(0,0,0,.55);
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: clamp(18px, 3vw, 48px);
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--paper);
+      text-decoration: none;
+      font-size: clamp(.9rem, 1.3vw, 1.15rem);
+      font-weight: 700;
+      letter-spacing: .02em;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 6px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ffe399;
+      border-bottom-color: #ffe399;
+      outline: none;
+    }
+
+    .hero-content {
+      width: min(1120px, 100%);
+      margin: auto;
+      padding: 70px clamp(20px, 5vw, 72px) 90px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+      gap: clamp(32px, 6vw, 82px);
+      align-items: center;
+    }
+
+    .copy h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(3rem, 7vw, 6.6rem);
+      line-height: .94;
+      letter-spacing: -.04em;
+      text-shadow: 0 4px 22px rgba(0,0,0,.55);
+      margin-bottom: 26px;
+    }
+
+    .rule {
+      width: 120px;
+      height: 5px;
+      background: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    .copy p {
+      max-width: 650px;
+      font-size: clamp(1.06rem, 1.9vw, 1.42rem);
+      line-height: 1.55;
+      text-shadow: 0 2px 12px rgba(0,0,0,.7);
+      margin-bottom: 34px;
+    }
+
+    .actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 6px;
+      padding: 14px 20px;
+      background: var(--red);
+      color: var(--paper);
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 26px rgba(0,0,0,.25);
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.13);
+      backdrop-filter: blur(6px);
+    }
+
+    .label-card {
+      justify-self: center;
+      width: min(360px, 100%);
+      background: rgba(255,255,255,.95);
+      color: var(--ink);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.42);
+      transform: rotate(1.5deg);
+    }
+
+    .label-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    section {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 74px clamp(20px, 5vw, 72px);
+    }
+
+    .section-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      background: #fff;
+      border: 1px solid #ded8cc;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .info-card h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: #333;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 24px clamp(20px, 5vw, 72px);
+      text-align: center;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 860px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav ul { gap: 18px; flex-wrap: wrap; }
+      .hero-content { grid-template-columns: 1fr; padding-top: 48px; }
+      .label-card { transform: none; }
+      .cards { grid-template-columns: 1fr; }
+      .brand { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <header>
+      <div class="brand">Intellectual Nutrition Label</div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#labels">The Labels</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+      <div class="copy">
+        <h1>Know what’s really in your education.</h1>
+        <div class="rule"></div>
+        <p>The Intellectual Nutrition Label helps parents and students evaluate the intellectual ingredients inside college classes before they pay for a semester of instruction.</p>
+        <div class="actions">
+          <a class="button" href="#labels">View the Labels</a>
+          <a class="button secondary" href="#about">Learn More</a>
+        </div>
+      </div>
+
+      <aside class="label-card" aria-label="Sample Intellectual Nutrition Label image">
+        <img src="assets/sample-label.png" alt="Sample Intellectual Nutrition Label" />
+      </aside>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="section-inner cards">
+      <article class="info-card">
+        <h2>About</h2>
+        <p>A transparency tool for parents and students who want to know what worldview, assumptions, and values may be served inside a college course.</p>
+      </article>
+      <article class="info-card" id="labels">
+        <h2>The Labels</h2>
+        <p>Labels summarize publicly available information about professors, including university pages, CVs, publications, books, interviews, and course materials.</p>
+      </article>
+      <article class="info-card" id="contact">
+        <h2>Contact</h2>
+        <p>Use this section later for an email address, submission form, or instructions for suggesting professors and courses for review.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    IntellectualNutritionLabel.com
+  </footer>
+</body>
+</html>
